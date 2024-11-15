@@ -1,4 +1,24 @@
-Change
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Interactive Page</title>
+</head>
+<body>
+    <h1 id="myHeading">Welcome to JavaScript!</h1>
+    <button id="changeTextButton">Click Me!</button>
 
-<a href="index.html">Home</a>
-<a href="https://opulent-memory-4gjv7x6rgpxcqgq9-8000.app.github.dev/">Home Absolute</a>
+    <script>
+        console.log("Hello from JavaScript!");
+        // Your JavaScript will go here
+        // Get the button element
+        const button = document.getElementById("changeTextButton");
+        const heading = document.getElementById("myHeading");
+
+        // Add click functionality
+        button.addEventListener("click", function() {
+        heading.innerHTML = "Text Changed!";
+        });
+    </script>
+</body>
+</html>
+
