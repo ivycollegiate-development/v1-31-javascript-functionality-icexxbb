@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Interactive Party Page</title>
+</head>
+<body>
+    <h1 id="myHeading">Welcome to JavaScript!</h1>
+    
+    <button id="partyButton">Let's Party!</button>
+    
+    <script>
+        // Your JavaScript will go here
+        // Get the button and heading elements
+const partyButton = document.getElementById("partyButton");
+const heading = document.getElementById("myHeading");
+
+// Define an array of fun party messages
+const messages = [
+    "Let’s get this party started!",
+    "WOOO! It’s party time!",
+    "Feeling the vibe! 🎉",
+    "You’re a party animal! 🦁",
+    "Dance like nobody’s watching! 💃",
+    "Who needs a DJ when you’ve got JavaScript?"
+];
+
+// Function to generate random colors
+function getRandomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Add click functionality to the button
+partyButton.addEventListener("click", function() {
+    // Change the page background color to a random color
+    document.body.style.backgroundColor = getRandomColor();
+    
+    // Change the heading to a random party message
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    heading.innerHTML = randomMessage;
+});
+
+    </script>
+</body>
+</html>
